@@ -1,0 +1,22 @@
+import React from 'react'
+import CardHeader from './home/post_card/cardHeader'
+import CardBody from './home/post_card/cardBody'
+import CardFooter from './home/post_card/cardFooter'
+
+import Comments from './home/comments'
+import InputComment from './home/inputComment'
+
+const PostCard = ({post, theme}) => {
+    return (
+        <div className="card my-3"> 
+            <CardHeader post={post} />
+            <CardBody post={post} theme={theme} />
+            <CardFooter post={post} />
+
+            <Comments post={post} />
+            <InputComment post={post} />
+        </div>
+    )
+}
+
+export default PostCard
